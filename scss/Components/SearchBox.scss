@@ -1,0 +1,26 @@
+.searchbox {
+    #search {
+        width: 100%;
+        height: 100%;
+        border: none;
+        background-color: #f1efef;
+        padding: 4px 20px;
+        outline: none;
+      }
+    position: relative !important;
+    .searchInput {
+      position: relative !important;
+    }
+    .serch {
+      position: absolute !important;
+      margin-right: -40px;
+      margin-top: 5px;
+      cursor: pointer;
+    }
+    .remove {
+      position: absolute !important;
+      margin-right: -70px;
+      margin-top: 5px;
+      cursor: pointer;
+    }
+  }

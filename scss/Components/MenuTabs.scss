@@ -1,0 +1,19 @@
+//start MenuTabs Styles
+.MenuTabs {
+    .filters_menu {
+      display: flex;
+      list-style: none;
+      justify-content: center;
+      margin-top: 20px;
+      .tabs {
+        display: inline;
+        outline: none;
+        padding: 0px 20px;
+        margin: 0px 10px;
+        border-radius: 2px;
+        font-size: 18px;
+        cursor: pointer;
+      }
+    }
+  }
+  //end MenuTabs Styles

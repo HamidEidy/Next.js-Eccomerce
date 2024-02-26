@@ -1,0 +1,23 @@
+.category {
+    padding: 5px 0px;
+    .categoryTitle {
+      margin-bottom: 5px;
+    }
+  
+    li {
+      margin: 0px 10px;
+      padding: 8px;
+      list-style-type: none;
+      border-radius: 2px;
+    }
+    li:hover {
+      cursor: pointer;
+    }
+    p {
+      line-height: 15px;
+    }
+    .active {
+      color: #ffc107;
+    }
+  }
+  

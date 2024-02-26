@@ -1,0 +1,14 @@
+.pagination {
+    justify-content: center;
+    text-align: center;
+    direction: ltr;
+    .page-link {
+      background-color: #f1efef;
+      color: #ffc107;
+    }
+    .active {
+      background-color: #ffc107;
+      color: #f1efef;
+      outline: none;
+    }
+  }

@@ -1,0 +1,32 @@
+//start suggestion styles
+
+.suggest {
+    .card {
+      text-align: start !important;
+      .card-body {
+        text-align: end !important;
+      }
+      .card-footer {
+        direction: rtl;
+      }
+    }
+    
+.slick-prev:before,
+.slick-next:before {
+  color: #000000 !important;
+  font-size: 45px !important;
+}
+.slick-slide {
+  padding: 0px;
+}
+
+.slick-prev,
+.slick-next {
+  z-index: 999; /* تنظیم z-index برای دکمه‌ها */
+}
+.slick-next {
+  margin-right: 23px;
+}
+
+  }
+  //end suggestion styles

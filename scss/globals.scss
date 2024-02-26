@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  direction: rtl !important;
+  background-image: url("/bg.jpg");
+  background-size: 30% 15%;
+}
+@font-face {
+  font-family: "Vazir";
+  src: url(../public/font/Vazir.woff2) format("woff2");
+}
+@media only screen and (max-width: 600px) {
+  .sortby {
+    ul {
+      margin-right: 15px;
+      margin-top: 5px;
+      padding: 5px 0px;
+    }
+  }
+}
+@import "/scss/layouts/header";
+@import "/scss/Components/MenuTabs";
+@import "/scss/Components/GoToMenuBTN";
+@import "/scss/layouts/Footer.scss";
+@import "/scss/Components/Suggestions.scss";
+@import "/scss/ProfileSection.scss";
+@import "/scss/CartSection.scss";
+@import "/scss/Table.scss";
+@import "scss/Orders.scss";
+@import "scss/Pagination.scss";
+@import "scss/Components/Category.scss";
+@import "scss/Components/SortBy.scss";
+@import "scss/Components/SearchBox.scss";
+@import "scss/Card.scss";
+@import "/scss/LoginForm.scss";
+.spaceBg {
+  background-image: url("/105272.jpg");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+.Toastify__toast-body {
+  font-family: "Vazir", sans-serif !important;
+}
+.MapContainer {
+  height: 300px;
+}
+.morefoods {
+  direction: ltr;
+}

@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": ["./*"]
+    }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/homePage/contact-us/Map.tsx", "app/login/layout.jsx", "app/login/page.tsx", "utils/fetch.ts", "components/homePage/contact-us/ContactForm.tsx", "actions/contact.ts", "components/SubmitButton.tsx", "components/libraries/ReduxProvider.tsx"],
+  "exclude": ["node_modules"]
+}
