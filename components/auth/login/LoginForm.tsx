@@ -5,9 +5,8 @@ import { toast } from "react-toastify";
 import { login } from "@/actions/auth";
 import { useRouter } from "next/navigation";
 import SubmitButton from "@/components/SubmitButton";
-const LoginForm = ({ setAuth }) => {
+const LoginForm = ({ setAuth }:any) => {
     const [stateLogin, formActionLogin] = useFormState<any, any>(login, {});
-    const oruter = useRouter()
     useEffect(() => {
         if (stateLogin.status === 'error') {
             toast.error(stateLogin.message)

@@ -1,17 +1,18 @@
 'use client'
 
 import { addToCart, removeFromCart } from "@/redux/cart/action"
-import { useEffect } from "react"
 import { useDispatch } from "react-redux"
-import { toast } from "react-toastify"
+import { CartItem } from "@/interfaces"
 
 
-const AddToCartButton = ({product, qty}:any) => {
+const AddToCartButton = ({product, qty}:{product:CartItem, qty:number}) => {
     const dispatch = useDispatch()
 
     const handleAddToCart = () => {
         dispatch(removeFromCart(product.id))
         dispatch(addToCart(product, qty))
+        // console.log('product :',product);
+        
     }
 
     return(

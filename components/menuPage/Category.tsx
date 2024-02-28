@@ -1,12 +1,12 @@
 'use client'
-import { getFetch } from "@/utils/fetch";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-
-const Categort = ({categories}:any)=> {
+import { category } from "@/interfaces";
+const Categort = ({categories}:{categories:category[]})=> {
+    console.log('cat :', categories);
+    
     const pathname = usePathname()
     const router = useRouter()
     const searchParams = useSearchParams()
- 
     const changeCategory = (id: string) =>{
         const params = new URLSearchParams(searchParams)
        params.set('category' , id)

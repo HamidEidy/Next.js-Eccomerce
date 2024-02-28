@@ -6,9 +6,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { useDispatch, useSelector } from "react-redux";
 import AddButton from "./AddButton";
+import { CartItem } from "@/interfaces";
 
-
-const Card = ({ product }: any) => {
+const Card = ({ product }: { product: CartItem }) => {
 
     return (
         <div className="col">

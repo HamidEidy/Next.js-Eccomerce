@@ -1,8 +1,9 @@
 import { ADD_TO_CART, INCREMENT, DECREMENT, REMOVE_FROM_CART, CLEAR_CART } from "./actionType";
+import { returnAction } from "@/interfaces";
 export const addToCart = (product: any, qty: number) => {
     return {
         type: ADD_TO_CART,
-        payload: { product, qty }
+        payload: { product, qty },      
     }
 }
 

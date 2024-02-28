@@ -3,7 +3,6 @@ import { useFormState } from "react-dom";
 import SubmitButton from "../SubmitButton";
 import { useEffect } from "react";
 import { toast } from "react-toastify";
-import { checkOtpp } from "@/utils/fetchWithToken";
 import { checkCode } from "@/actions/profile";
 
 const Coupon = () => {

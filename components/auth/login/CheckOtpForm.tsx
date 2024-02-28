@@ -1,7 +1,7 @@
 'use client'
 import { useFormState } from "react-dom";
-import { checkOtp, resendOtp } from "@/actions/auth";
-import { useContext, useEffect, useState } from "react";
+import { checkOtp } from "@/actions/auth";
+import { useContext, useEffect } from "react";
 import { toast } from "react-toastify";
 import { useRouter } from "next/navigation";
 import SubmitButton from "@/components/SubmitButton";

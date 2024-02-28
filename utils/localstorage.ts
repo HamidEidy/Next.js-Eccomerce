@@ -4,7 +4,7 @@ const saveStorage = (cart:any) => {
 }
 
 const getStorage = () => {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== 'undefined') {      
         return localStorage.getItem('shopping-cart') ? JSON.parse(localStorage.getItem('shopping-cart')) : [];
     }
 }

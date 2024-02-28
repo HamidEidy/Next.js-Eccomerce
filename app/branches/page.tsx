@@ -1,11 +1,6 @@
 'use client'
 import BranchCard from "@/components/branches/BranchesCard";
-interface Branch {
-    location: [number, number];
-    title: string;
-    description: string;
-    href: string;
-}
+import { Branch } from "@/interfaces";
 const Branches = (): JSX.Element => {
     const branches: Branch[] = [
         { location: [35.807190, 51.428987], title: 'تهران، تجریش', description: 'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.', href: 'https://maps.app.goo.gl/VX46nuFLzZ1BGH4E8' },
@@ -18,7 +13,7 @@ const Branches = (): JSX.Element => {
         <section className="container text-center mt-3">
             <h3 className='py-4 mb-3 spaceBg'>لیست شعبه های فعال</h3>
             <div className="row justify-content-center g-1">
-                {branches.map((branch, index) => (
+                {branches.map((branch, index:number) => (
                     <div className="col-lg-5 col-sm-12 m-1" key={index}>
                         <BranchCard {...branch} />
                     </div>))

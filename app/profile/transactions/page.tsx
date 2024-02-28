@@ -1,5 +1,5 @@
 import Paginate from "@/components/menuPage/Paginate";
-import Layout from "@/components/profile/layout";
+import Layout from "@/app/profile/layout";
 import APIManager from "@/utils/fetchWithToken";
 import { numberFormat } from "@/utils/helper";
 
@@ -9,7 +9,7 @@ const transactions = async ({ searchParams }: any) => {
 
 
     return (
-        <Layout>
+        <div className="col-sm-12 col-lg-9">
             <div className="col-12">
                 <div className="table-responsive">
                     <table className="table align-middle">
@@ -48,7 +48,7 @@ const transactions = async ({ searchParams }: any) => {
                 ) }
                
             </div>
-        </Layout>
+        </div>
     )
 }
 export default transactions;

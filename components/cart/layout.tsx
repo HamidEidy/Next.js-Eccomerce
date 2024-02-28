@@ -5,8 +5,13 @@ import Image from "next/image"
 import Link from "next/link"
 import { useDispatch, useSelector } from "react-redux"
 import CartTable from "./CartTable"
-const layout = ({children}:any) => {
+interface store {
+ 
+}
+const layout = ({children}:{children:ChildNode}) => {
     const data = useSelector(store.getState).shoppingCart?.cart
+    console.log('storage  :  ', data);
+    
     const dispatch = useDispatch()
     return(
         <div className="cart">

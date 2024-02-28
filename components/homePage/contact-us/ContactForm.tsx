@@ -6,7 +6,6 @@ import { useEffect, useRef } from "react";
 import { toast } from "react-toastify";
 
 const ContactForm = () => {
-    
 const [state, formAction] = useFormState<any, any>(create, {});
 const ref = useRef<HTMLFormElement>(null);
 useEffect(() =>{

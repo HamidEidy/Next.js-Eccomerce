@@ -2,6 +2,7 @@ import { getFetch } from '@/utils/fetch';
 import Card from '../card/Card';
 import { Slider } from '../libraries/slickSliderClient'
 import ResponsiveSuggestions from './ResponsiveSuggertions';
+import { CartItem } from '@/interfaces';
 const settings = {
     style: { textAlign: 'center' },
     rtl: true,
@@ -10,15 +11,15 @@ const settings = {
     slidesToShow: 4,
     swipeToSlide: true,
 };
-const Suggestions = async () => {
+const Suggestions = async ({title}: { title: string }) => {
     const Products = await getFetch('/random-products?count=8')
     return (
         <section className="container text-center mt-5">
-            <h1 className="spaceBg py-3">محصولات پیشنهادی</h1>
+            <h1 className="spaceBg py-3">{title}</h1>
             <div className="slider-container d-lg-block d-md-block d-sm-none d-lg-block d-xl-block">
                 <div className="suggest">
                     <Slider {...settings} >
-                        {Products.data.map((product: any) => (
+                        {Products.data.map((product: CartItem) => (
                             <div className="p-2" key={product.id}>
                                 <Card product={product} />
                             </div>

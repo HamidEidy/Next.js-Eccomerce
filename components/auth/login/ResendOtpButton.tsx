@@ -7,7 +7,7 @@ import { toast } from "react-toastify";
 
 const ResendOtpButton = () => {
     const [stateResendOtp, formActionresendOtp] = useFormState<any, any>(resendOtp, {});
-    const [second, setSecond] = useState(15);
+    const [second, setSecond] = useState<number>(15);
     useEffect(() => {
         const interval = setInterval(() => {
             if (second > 0) {

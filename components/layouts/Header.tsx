@@ -9,8 +9,8 @@ import { AuthContext } from "../libraries/ReduxProvider";
 
 const Header = (): any => {
     const route = usePathname()
-    const [cartCount, setCartCount] = useState([]);
-    const state = useSelector(state => state.shoppingCart);
+    const [cartCount, setCartCount] = useState<[] | null>([]);
+    const state = useSelector((state:any) => state.shoppingCart);
     const { user } = useContext<any>(AuthContext);
 
     useEffect(() => {

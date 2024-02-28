@@ -3,8 +3,11 @@ import { numberFormat, salePercent } from "@/utils/helper";
 import Image from "next/image";
 import Coupon from "./Coupon";
 import { toast } from "react-toastify";
+import { CartItem } from "@/interfaces";
 
-const CartTable = ({data, dispatch, children}):JSX.Element =>{
+const CartTable = ({data, dispatch, children}:{data: CartItem[] , dispatch: any, children:any}):JSX.Element =>{
+    console.log('cart :', dispatch);
+    
     return(
         <section className="container">
         <div className="row">
@@ -26,7 +29,7 @@ const CartTable = ({data, dispatch, children}):JSX.Element =>{
                                     </thead>
 
                                     <tbody>
-                                        {data.map((product: any) => (
+                                        {data.map((product: CartItem) => (
                                             <tr key={product.id}>
                                                 <th>
                                                     <Image src={product.primary_image} width="100" height={60} alt="" />
@@ -101,7 +104,7 @@ const CartTable = ({data, dispatch, children}):JSX.Element =>{
                                         <li className="list-group-item d-flex justify-content-between">
                                             <div>مجموع قیمت :</div>
                                             <div>
-                                                {numberFormat(data.reduce((total: any, product: any) => {
+                                                {numberFormat(data.reduce((total: number, product: CartItem) => {
                                                     return product.is_sale ? (total + product.sale_price * product.qty) : (total + product.price * product.qty)
                                                 }, 0))}
                                                 تومان
@@ -123,7 +126,7 @@ const CartTable = ({data, dispatch, children}):JSX.Element =>{
                                                 }, 0)) - (data.reduce((total:any, product:any) => {
                                                     return product.is_sale ? (total + product.sale_price * product.qty) : (total + product.price * product.qty)
                                                 }, 0)))} */}
-                                                {numberFormat(data.reduce((total: any, product: any) => {
+                                                {numberFormat(data.reduce((total: number, product: CartItem) => {
                                                     return product.is_sale ? (total + product.sale_price * product.qty) : (total + product.price * product.qty)
                                                 }, 0))}
                                                 تومان

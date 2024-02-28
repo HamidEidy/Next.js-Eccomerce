@@ -6,9 +6,7 @@ import SortBy from "@/components/menuPage/SortBy";
 import { getFetch } from '@/utils/fetch';
 import ProductList from "@/components/menuPage/ProductList";
 import { ReactElement } from "react";
-interface MenuProps {
-    searchParams: string;
-}
+import { MenuProps } from "@/interfaces";
 
 const menu = async ({ searchParams }: MenuProps): Promise<ReactElement> => {
     const params = new URLSearchParams(searchParams)

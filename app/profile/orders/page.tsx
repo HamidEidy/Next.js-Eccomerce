@@ -1,14 +1,16 @@
 import Paginate from "@/components/menuPage/Paginate";
-import Layout from "@/components/profile/layout";
+import Layout from "@/app/profile/layout";
 import APIManager from "@/utils/fetchWithToken";
 import { getBlurDataURL, numberFormat } from "@/utils/helper";
 import Image from "next/image";
-
+import { ParamType } from "@/interfaces";
 const orders = async ({ searchParams }: any) => {
+    console.log('searchParam  :', searchParams);
+    
     const params = new URLSearchParams(searchParams)
     const data = await APIManager.getOrders(`/profile/orders?${params.toString()}`)
     return (
-        <Layout>
+        <div className="col-sm-12 col-lg-9">
             {data?.data ? (
                 <div className="col-12 orders">
                     <div className="table-responsive">
@@ -117,7 +119,7 @@ const orders = async ({ searchParams }: any) => {
 
 
 
-        </Layout>
+        </div>
     )
 }
 

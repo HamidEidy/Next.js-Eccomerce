@@ -1,7 +1,7 @@
 'use client'
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-
-const Paginate = ({ links }: any): any => {
+import { paginationLinks } from "@/interfaces";
+const Paginate = ({ links }:any): any => {
     const pathName = usePathname()
     const router = useRouter();
     const searchParams = useSearchParams()

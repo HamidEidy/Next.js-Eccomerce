@@ -1,12 +1,10 @@
 'use client'
-import { decrement, increment } from "@/redux/cart/action"
-import store from "@/redux/store"
 import Image from "next/image"
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import AddToCartButton from "./AddToCartButton"
 
 const IncDecButtons = ({ product }: any) => {
-    const [qty , setQty] = useState(1)
+    const [qty , setQty] = useState<number>(1)
 
 
 

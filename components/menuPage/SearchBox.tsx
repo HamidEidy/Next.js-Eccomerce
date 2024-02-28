@@ -4,7 +4,7 @@ import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useState } from "react"
 
 const SearchBox = (): JSX.Element => {
-    const [term, setTerm] = useState('');
+    const [term, setTerm] = useState<string>('');
     const pathname = usePathname();
     const router = useRouter();
     const searchParams = useSearchParams()
@@ -30,7 +30,7 @@ const SearchBox = (): JSX.Element => {
                     <input onChange={(e) => setTerm(e.target.value)} value={term} className="rounded searchInput" id="search" type="text" placeholder="اینجا بنویس..." />
 
 
-                   {term && <Image onClick={() => handleSearch()} className="serch" width="25" height="25" src="https://img.icons8.com/dusk/100/search--v1.png" alt="search--v1" />} 
+                   {term && <Image onClick={() => handleSearch(null)} className="serch" width="25" height="25" src="https://img.icons8.com/dusk/100/search--v1.png" alt="search--v1" />} 
                    {searchParams.has('search') && term && <Image onClick={() => handleSearch(true)} width="25" className="remove" height="25" src="https://img.icons8.com/fluency/100/delete-sign.png" alt="delete-sign" /> }
                 </div>
             

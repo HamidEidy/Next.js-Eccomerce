@@ -1,6 +1,6 @@
 import APIManager from "@/utils/fetchWithToken";
 import Link from "next/link";
-
+import { Address } from "@/interfaces";
 const Address = async () => {
     const data = await APIManager.getClientProfileData('/user/addresses')
 
@@ -15,7 +15,7 @@ const Address = async () => {
                         انتخاب آدرس
                     </div>
                     <select style={{ width: "200px" }} className="form-select me-3" aria-label="Default select example">
-                        {UserAddress.map((address: any) => (
+                        {UserAddress.map((address: Address) => (
                             <option value={address.id}>{address.title}</option>
                         ))
                         }

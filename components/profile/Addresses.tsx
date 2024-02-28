@@ -14,7 +14,7 @@ const Addresses = ({ address, provinces, cities }: any) => {
         setSelectedProvince(selectedProvince);
     };
 
-    const DeleteAdres = async (e) => {
+    const DeleteAdres = async (e: any) => {
         e.preventDefault();
         const delet = await addressDelete(address.id)
         if (delet.status === 'success') {

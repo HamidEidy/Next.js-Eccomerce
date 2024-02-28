@@ -1,25 +1,14 @@
 import { getFetch } from "@/utils/fetch";
 import { getBlurDataURL, numberFormat, salePercent } from "@/utils/helper";
 import Image from "next/image";
-import Card from '../../../components/card/Card';
-import { Slider } from '../../../components/libraries/slickSliderClient'
 import IncDecButtons from "../../../components/cartButtons/IncDecButtons";
-import AddToCartButton from "../../../components/cartButtons/AddToCartButton";
-import ResponsiveSuggestions from "@/components/homePage/ResponsiveSuggertions";
+import Suggestions from "@/components/homePage/Suggestions";
+import { ParamType } from "@/interfaces";
 
-const settings = {
-    style: { textAlign: 'center' },
-    rtl: true,
-    infinite: true,
-    centerPadding: "60px",
-    slidesToShow: 4,
-    swipeToSlide: true,
-};
-const product = async ({ params }: any) => {
+const product = async ({ params }: {params : ParamType}) => {
+    console.log('param :', params);
     const product2 = await getFetch(`/products/${params.slug}`)
     const product = product2.data
-    const Products2 = await getFetch('/random-products?count=8')
-    const Products = Products2.data
     return (
         <>
             <section className="single_page_section mt-5">
@@ -90,25 +79,11 @@ const product = async ({ params }: any) => {
             </section>
 
             <hr />
-            <section className="food_section my-5">
-                <section className="container suggest text-center mt-5">
-                    <h1 className="spaceBg py-3">محصولات دیگر</h1>
-                    <div className="slider-container d-lg-block d-md-block d-sm-none d-lg-block d-xl-block">
-                      
-                        <Slider {...settings}>
-                            {Products.map((product: any) => (
-                                <div className="p-2" key={product.id}>
-                                    <Card product={product} />
-                                </div>
-                            ))}
-                        </Slider>
-                    </div>
-                    <div className="morefoods">
-                    <ResponsiveSuggestions Products={Products2} />
-               
-                    </div>
-               </section>
-            </section>
+       
+            <Suggestions title={'سایر محصولات'} />
+                
+       
+ 
         </>
     )
 }

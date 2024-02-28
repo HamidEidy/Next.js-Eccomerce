@@ -6,10 +6,10 @@ const Slider = (): JSX.Element => {
                 <div id="carouselExampleAutoplaying" className="carousel slide " data-bs-ride="carousel">
                     <div className="carousel-inner rounded">
                         <div className="carousel-item text-center active">
-                            <img src="/slider1.jpg" className="d-block w-100" alt="slider-1" />
+                            <img src="/images/slider1.jpg" className="d-block w-100" alt="slider-1" />
                         </div>
                         <div className="carousel-item">
-                            <img src="/slider2.jpg" className="d-block w-100" alt="slider-2" />
+                            <img src="/images/slider2.jpg" className="d-block w-100" alt="slider-2" />
                         </div>
                     </div>
                     <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"

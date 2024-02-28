@@ -2,7 +2,7 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import Image from 'next/image';
 
-const BranchCard = ({ location, title, description, href }: any) => {
+const BranchCard = ({ location, title, description, href }:{location:[number, number], title:string, description:string, href:string}) => {
     return (
         <div className="card p-2">
             <div className="row g-0">
