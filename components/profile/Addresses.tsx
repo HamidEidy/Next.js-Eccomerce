@@ -36,22 +36,22 @@ const Addresses = ({ address, provinces, cities }: any) => {
         <div className="card card-body">
             <form action={updateAddress}>
                 <div className="row g-4">
-                    <div className="col col-md-6 col-sm-12">
+                    <div className="col col-12 col-md-6">
                         <label className="form-label">عنوان</label>
                         <input name="title" type="text" className="form-control" defaultValue={address.title} />
                     </div>
-                    <div className="col col-md-6 col-sm-12">
+                    <div className="col col-12 col-md-6">
                         <label className="form-label">شماره تماس</label>
                         <input name="cellphone" type="text" defaultValue={address.cellphone} className="form-control" />
                     </div>
-                    <div className="col col-md-6 col-sm-12">
+                    <div className="col col-12 col-md-6">
                         <label className="form-label">کد پستی</label>
                         <input name="postal_code" type="text" defaultValue={address.postal_code} className="form-control" />
                     </div>
 
 
 
-                    <div className="col col-md-6">
+                    <div className="col col-6">
                         <label className="form-label">استان</label>
                         <select defaultValue={address.province_id} name="province_id" className="form-select" onChange={handleProvinceChange}>
                             {provinces.map((item: any) => (
@@ -62,7 +62,7 @@ const Addresses = ({ address, provinces, cities }: any) => {
                     </div>
 
 
-                    <div className="col col-md-6">
+                    <div className="col col-6">
                         <label className="form-label">شهر</label>
                         <select defaultValue={address.city_id} name="city_id" className="form-select" >
                             {cities.filter((item: any) => item.province_id == selectedProvince).map((item: any) => (

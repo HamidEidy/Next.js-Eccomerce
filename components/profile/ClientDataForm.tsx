@@ -21,15 +21,15 @@ const ClientDataForm = ({client}:any) =>{
     return(
         <form action={updateForm} className="vh-70">
         <div className="row g-4" >
-            <div className="col col-md-6 col-sm-12">
+            <div className="col col-12 col-md-6">
                 <label className="form-label">نام و نام خانوادگی</label>
                 <input name="name" type="text" className="form-control" defaultValue={client.name} />
             </div>
-            <div className="col col-md-6 col-sm-12">
+            <div className="col col-12 col-md-6">
                 <label className="form-label">ایمیل</label>
                 <input name="email" type="text" className="form-control" defaultValue={client.email} />
             </div>
-            <div className="col col-md-6 col-sm-12">
+            <div className="col col-12 col-md-6">
                 <label className="form-label">شماره تلفن</label>
                 <input type="text" className="form-control" disabled defaultValue={client.cellphone} />
             </div>

@@ -4,6 +4,7 @@ import SubmitButton from "../../SubmitButton";
 import { create } from "@/actions/contact";
 import { useEffect, useRef } from "react";
 import { toast } from "react-toastify";
+import TabsTitle from "@/components/TabsTitle";
 
 const ContactForm = () => {
 const [state, formAction] = useFormState<any, any>(create, {});
@@ -21,7 +22,7 @@ useEffect(() =>{
 
     return (
         <section className="container text-center">
-            <h1 className="spaceBg py-4 mt-3">تماس با ما</h1>
+           <TabsTitle titletext='تماس با ما' />
             <form action={formAction} ref={ref}>
                 <div className="form-group row">
                     <div className="form-group col-md-6 pt-3">

@@ -11,7 +11,7 @@ const product = async ({ params }: {params : ParamType}) => {
     const product = product2.data
     return (
         <>
-            <section className="single_page_section mt-5">
+            <section className="single_page_section mt-md-5">
                 <div className="container">
                     <div className="row justify-content-center">
                         <div className="col-md-10 offset-md-1 ">

@@ -32,20 +32,20 @@ const CreateAddressForm = ({ provinces, cities }: any) => {
             <div className="collapse mt-3" id="collapseExample">
                 <form className="card card-body" action={createNewAddress} ref={ref}>
                     <div className="row g-4">
-                        <div className="col col-md-6 col-sm-12">
+                        <div className="col col-12 col-md-6">
                             <label className="form-label">عنوان</label>
                             <input type="text" name="title" className="form-control" />
 
                         </div>
-                        <div className="col col-md-6 col-sm-12">
+                        <div className="col col-12 col-md-6">
                             <label className="form-label">شماره تماس</label>
                             <input type="text" name="cellphone" className="form-control" />
                         </div>
-                        <div className="col col-md-6 col-sm-12" >
+                        <div className="col col-12 col-md-6" >
                             <label className="form-label">کد پستی</label>
                             <input type="text" name="postal_code" className="form-control" />
                         </div>
-                        <div className="col col-md-6 ">
+                        <div className="col col-12 col-md-6 ">
                             <label className="form-label">استان</label>
                             <select name="province_id" className="form-select" onChange={handleProvinceChange}>
                                 <option disabled selected>استان خود را انتخاب کنید</option>
@@ -54,7 +54,7 @@ const CreateAddressForm = ({ provinces, cities }: any) => {
                                 ))}
                             </select>
                         </div>
-                        <div className="col col-md-6">
+                        <div className="col col-12 col-md-6">
                             <label className="form-label">شهر</label>
                             <select name="city_id" className="form-select" >
                                 <option disabled selected>شهر خود را انتخاب کنید</option>

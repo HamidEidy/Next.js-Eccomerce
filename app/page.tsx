@@ -9,7 +9,9 @@ const DynamicComponentWithNoSSR = dynamic(() => import('@/components/homePage/co
 })
 export default function Home() {
   return (
-    <main>
+    <div className="container">
+    <div className="row">
+    <main className="col-12">
       <Slider />
       <MenuTabs />
       <MenuButton />
@@ -17,5 +19,6 @@ export default function Home() {
       <DynamicComponentWithNoSSR />
       <ContactForm />
     </main>
+    </div></div>
   );
 }

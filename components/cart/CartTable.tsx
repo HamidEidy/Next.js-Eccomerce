@@ -11,7 +11,7 @@ const CartTable = ({data, dispatch, children}:{data: CartItem[] , dispatch: any,
     return(
         <section className="container">
         <div className="row">
-            <div className="justify-content-center d-flex align-items-center text-center ">
+            <div className="justify-content-center d-flex align-items-center text-center">
                 <div className="col-lg-10 col-sm-11">
                     <div className="row gy-5">
                         <div className="col-12">

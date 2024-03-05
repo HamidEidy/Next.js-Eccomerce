@@ -1,7 +1,7 @@
 'use client'
 const Slider = (): JSX.Element => {
     return (
-        <section className="slider_section d-none d-md-block mt-4">
+        <section className="slider_section mt-4">
             <div className="bg-box container">
                 <div id="carouselExampleAutoplaying" className="carousel slide " data-bs-ride="carousel">
                     <div className="carousel-inner rounded">

@@ -1,4 +1,5 @@
 'use client'
+import TabsTitle from "@/components/TabsTitle";
 import BranchCard from "@/components/branches/BranchesCard";
 import { Branch } from "@/interfaces";
 const Branches = (): JSX.Element => {
@@ -11,7 +12,7 @@ const Branches = (): JSX.Element => {
 
     return (
         <section className="container text-center mt-3">
-            <h3 className='py-4 mb-3 spaceBg'>لیست شعبه های فعال</h3>
+            <TabsTitle titletext='شعبه های فعال' />
             <div className="row justify-content-center g-1">
                 {branches.map((branch, index:number) => (
                     <div className="col-lg-5 col-sm-12 m-1" key={index}>

@@ -18,7 +18,7 @@ const TabProduct = ({ tabPanel, tabList }: any) => {
                         <TabPanel key={index}>
                             <div className="row">
                                 {panel.slice(0, 4).map((product: any) => (
-                                    <div key={product.id} className="col-lg-3 col-sm-6 mb-sm-3">
+                                    <div key={product.id} className="col-lg-3 col-sm-6 mb-sm-3 py-2">
                                         <Card product={product} />
                                     </div>
                                 ))}

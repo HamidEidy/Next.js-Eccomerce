@@ -14,9 +14,9 @@ const settings = {
 const Suggestions = async ({title}: { title: string }) => {
     const Products = await getFetch('/random-products?count=8')
     return (
-        <section className="container text-center mt-5">
-            <h1 className="spaceBg py-3">{title}</h1>
-            <div className="slider-container d-lg-block d-md-block d-sm-none d-lg-block d-xl-block">
+        <section className="container text-center">
+            <h1 className="tabsTitle">{title}</h1>
+            <div className="slider-container d-lg-block d-md-block d-none d-lg-block d-xl-block">
                 <div className="suggest">
                     <Slider {...settings} >
                         {Products.data.map((product: CartItem) => (

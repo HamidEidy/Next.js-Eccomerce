@@ -12,6 +12,18 @@ body {
   background-image: url("/images/bg.jpg");
   background-size: 30% 15%;
 }
+.table{
+  font-size: 12px;
+
+}
+.tabsTitle{
+  font-size: 30px;
+  background-image: url("/images/105272.jpg");
+  background-repeat: no-repeat;
+  background-position:bottom;
+padding-bottom: 20px;
+margin-top: 40px
+}
 @font-face {
   font-family: "Vazir";
   src: url(../public/font/Vazir.woff2) format("woff2");
@@ -19,12 +31,30 @@ body {
 @media only screen and (max-width: 600px) {
   .sortby {
     ul {
-      margin-right: 15px;
+      margin-right: 25px;
       margin-top: 5px;
       padding: 5px 0px;
     }
   }
+
+  html,
+main {
+  width: 100% !important;
+  overflow-x: hidden;
+  direction: rtl !important;
+  background-image: url("/images/bg.jpg");
+  background-size: 100% 5%;
 }
+.tabsTitle{
+  font-size: 22px;
+  background-image: url("/images/105272.jpg");
+  background-repeat: no-repeat;
+  background-position:bottom;
+padding-bottom: 20px;
+margin-top: 40px
+}
+};
+
 @import "/scss/layouts/header";
 @import "/scss/Components/MenuTabs";
 @import "/scss/Components/GoToMenuBTN";
